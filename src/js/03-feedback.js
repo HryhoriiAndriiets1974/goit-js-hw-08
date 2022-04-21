@@ -14,6 +14,9 @@ function onEmailInput() {
 
 function onFormSubmit(e) {
   e.preventDefault();
+    if (e.target.email.value === '' || e.target.message.value === '') {
+       alert('Please enter your email or message');
+       return; };
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 };
