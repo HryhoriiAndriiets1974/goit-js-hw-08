@@ -8,15 +8,21 @@ form.addEventListener('input', throttle(onEmailInput, 500));
 populateTextarea();
 
 function onEmailInput() {
-  const formData = JSON.stringify({ email: form.email.value, message: form.message.value });
+  const formData = JSON.stringify({
+    email: form.email.value,
+    message: form.message.value });
     localStorage.setItem(STORAGE_KEY, formData);
   };
 
 function onFormSubmit(e) {
   e.preventDefault();
-    if (e.target.email.value === '' || e.target.message.value === '') {
+  const emailData = e.target.email.value;
+  const messageData = e.target.message.value;
+  if (emailData === '' || messageData === '') {
        alert('Please enter your email or message');
        return; };
+  console.log('e-mail: ', emailData);
+  console.log('message: ', messageData);
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 };
