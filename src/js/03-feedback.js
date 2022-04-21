@@ -34,36 +34,3 @@ function populateTextarea() {
     form.message.value = JSON.parse(getData).message;
   }
 };
-
-
-
-
-
-
-
-
-
-
-// ===============================================  bad-1
-// const refs = {
-//   form: document.querySelector('.feedback-form'),
-//   email: document.querySelector('.feedback-form email'),
-//   textarea: document.querySelector('.feedback-form textarea'),
-
-// };
-// refs.form.addEventListener('submit', onFormSubmit);
-// refs.email.addEventListener('input', onEmailInput);
-// refs.textarea.addEventListener('input', onTextareaInput);
-
-// function onTextareaInput(e) {
-//   const message = e.target.value;
-//   localStorage.setItem(STORAGE_KEY, message);
-// };
-
-// function onEmailInput(e) {
-//   const email = e.target.value;
-//   localStorage.setItem(STORAGE_KEY, email);
-// };
-
-// function onFormSubmit(e) {};
-// function populateTextarea() {};
